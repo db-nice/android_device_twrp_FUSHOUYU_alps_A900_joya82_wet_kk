@@ -1,0 +1,14 @@
+# mount point	fstype    device    	[device2]
+
+/boot		    emmc		    /dev/bootimg                flags=display="Kernel";backup=1
+/logo		    emmc	        /dev/logo					flags=display="Logo";backup=1
+/system	        ext4		    /emmc@android               flags=display="System";wipeingui;backup=1
+/cache		    ext4		    /emmc@cache                 flags=display="Cache";wipeingui;backup=1
+/data		    ext4		    /emmc@usrdata	        	flags=display="data";storage;wipeingui;backup=1
+/misc           emmc            misc                        flags=display="Misc";backup=1;flashimg=1;logical;
+/nvram		    emmc	        /dev/nvram					flags=display="Nvram";backup=1
+/recovery	    emmc		    /dev/recovery               flags=display="Recovery";backup=1
+# usb otg disk
+/devices/platform/mt_usb auto vfat defaults voldmanaged=usbotg:auto flags=removable;storage;display="USB-OTG"
+/devices/platform/mtk-msdc.0/mmc_host   auto      vfat      defaults        voldmanaged=sdcard0:emmc@fat,noemulatedsd
+/devices/platform/mtk-msdc.1/mmc_host   auto      vfat      defaults        voldmanaged=sdcard1:auto
