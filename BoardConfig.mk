@@ -67,8 +67,6 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100 # (tagsLoadAddr - BOARD_KERNEL_BASE)
 #对于颠倒安装的屏幕，将屏幕上下翻转
 BOARD_HAS_FLIPPED_SCREEN:= true
 
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
-
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
