@@ -11,9 +11,6 @@ PRODUCT_RELEASE_NAME := OmniRom_Twrp_3.1.0
  $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
-# Inherit some common CM stuff.
-#$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/FUSHOUYU/A900/device.mk)
